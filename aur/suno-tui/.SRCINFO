@@ -1,0 +1,17 @@
+pkgbase = suno-tui
+	pkgdesc = A powerful, feature-rich TUI and CLI for browsing and downloading Suno.ai tracks
+	pkgver = 0.1.0
+	pkgrel = 1
+	url = https://github.com/pilldev/suno-tui
+	arch = x86_64
+	arch = aarch64
+	license = MIT
+	makedepends = cargo
+	depends = gcc-libs
+	depends = glibc
+	optdepends = mpv: in-TUI audio preview and live streaming playback
+	optdepends = ffmpeg: 320 kbps MP3 conversion and stream transcoding
+	source = suno-tui-0.1.0.tar.gz::https://github.com/pilldev/suno-tui/archive/refs/tags/v0.1.0.tar.gz
+	sha256sums = SKIP
+
+pkgname = suno-tui

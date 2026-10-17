@@ -1,0 +1,38 @@
+[package]
+name = "suno-tui"
+version = "0.1.0"
+edition = "2021"
+authors = ["pilldev"]
+description = "A powerful, feature-packed Rust TUI for browsing and downloading tracks from Suno.ai"
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/pilldev/suno-tui"
+keywords = ["suno", "tui", "music", "downloader", "audio"]
+categories = ["command-line-utilities", "multimedia::audio"]
+
+[dependencies]
+ratatui = "0.29"
+crossterm = { version = "0.28", features = ["event-stream"] }
+tokio = { version = "1.43", features = ["full"] }
+reqwest = { version = "0.12", default-features = false, features = ["json", "stream", "rustls-tls"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+id3 = "1.16"
+dirs = "6.0"
+toml = "0.8"
+futures-util = "0.3"
+clap = { version = "4.5", features = ["derive"] }
+regex = "1.11"
+anyhow = "1.0"
+chrono = { version = "0.4", features = ["serde"] }
+aes-gcm = "0.11.1"
+ctr = "0.10.1"
+aes = "0.9.3"
+base64 = "0.23.1"
+sha2 = "0.11.1"
+ratatui-image = { version = "3.0.0", default-features = false, features = ["crossterm"] }
+image = { version = "0.25", default-features = false, features = ["png", "jpeg"] }
+cbc = "0.2.1"
+pbkdf2 = "0.13.0"
+sha1 = "0.11.0"
+hmac = "0.13.0"

@@ -1,0 +1,23 @@
+# Maintainer: pilldev <pilldev@users.noreply.github.com>
+pkgname=suno-tui-bin
+pkgver=0.1.0
+pkgrel=1
+pkgdesc="A powerful, feature-rich TUI and CLI for browsing and downloading Suno.ai tracks (pre-compiled binary)"
+arch=('x86_64')
+url="https://github.com/pilldev/suno-tui"
+license=('MIT')
+provides=('suno-tui')
+conflicts=('suno-tui')
+depends=('gcc-libs' 'glibc')
+optdepends=(
+    'mpv: in-TUI audio preview and live streaming playback'
+    'ffmpeg: 320 kbps MP3 conversion and stream transcoding'
+)
+source_x86_64=("$url/releases/download/v$pkgver/suno-tui-v$pkgver-x86_64-unknown-linux-gnu.tar.gz")
+sha256sums_x86_64=('SKIP')
+
+package() {
+    install -Dm755 "suno-tui" "$pkgdir/usr/bin/suno-tui"
+    install -Dm644 "LICENSE" "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+    install -Dm644 "README.md" "$pkgdir/usr/share/doc/$pkgname/README.md"
+}

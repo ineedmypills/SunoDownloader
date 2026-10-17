@@ -1,0 +1,29 @@
+# Build artifacts
+/target/
+**/*.rs.bk
+
+# Local user configs and sessions (never commit personal tokens)
+config.toml
+*.token
+*.cookie
+
+# Downloaded media and test outputs
+downloads/
+*.mp3
+*.m4a
+*.mp4
+*.wav
+*.jpg
+*.png
+
+# Temporary databases and logs
+*.db
+*.sqlite
+*.log
+
+# IDE & OS files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*~
