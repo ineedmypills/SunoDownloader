@@ -201,7 +201,18 @@ mod tests {
         assert!(!icons.music.is_empty());
         assert!(!icons.check.is_empty());
         assert!(!icons.check_box_checked.is_empty());
-        // On this Linux system with /usr/share/fonts/TTF/*Nerd*, it should detect Nerd Fonts
-        assert!(icons.is_nerd);
+    }
+
+    #[test]
+    fn test_icons_nerd_and_unicode() {
+        let nerd = Icons::nerd_fonts();
+        assert!(nerd.is_nerd);
+        assert!(!nerd.music.is_empty());
+        assert_eq!(nerd.music, "\u{f001} ");
+
+        let unicode = Icons::unicode();
+        assert!(!unicode.is_nerd);
+        assert!(!unicode.music.is_empty());
+        assert_eq!(unicode.music, "♫ ");
     }
 }

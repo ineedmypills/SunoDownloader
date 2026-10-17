@@ -1,9 +1,9 @@
+#[cfg(unix)]
 use std::io::Write;
-use std::path::PathBuf;
-use std::process::{Child, Command, Stdio};
-
 #[cfg(unix)]
 use std::os::unix::net::UnixStream;
+use std::path::PathBuf;
+use std::process::{Child, Command, Stdio};
 
 #[derive(Debug, Clone, Copy, PartialEq)]
 pub enum PlayerBackend {
