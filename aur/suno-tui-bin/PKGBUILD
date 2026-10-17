@@ -4,7 +4,7 @@ pkgver=0.1.0
 pkgrel=1
 pkgdesc="A powerful, feature-rich TUI and CLI for browsing and downloading Suno.ai tracks (pre-compiled binary)"
 arch=('x86_64')
-url="https://github.com/pilldev/suno-tui"
+url="https://github.com/ineedmypills/SunoDownloader"
 license=('MIT')
 provides=('suno-tui')
 conflicts=('suno-tui')
@@ -14,7 +14,7 @@ optdepends=(
     'ffmpeg: 320 kbps MP3 conversion and stream transcoding'
 )
 source_x86_64=("$url/releases/download/v$pkgver/suno-tui-v$pkgver-x86_64-unknown-linux-gnu.tar.gz")
-sha256sums_x86_64=('SKIP')
+sha256sums_x86_64=('484b6fb2c12ca6bb35f41b83472e17c051c34506151a07f8fa44f30cb3c4008e')
 
 package() {
     install -Dm755 "suno-tui" "$pkgdir/usr/bin/suno-tui"

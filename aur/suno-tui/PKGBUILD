@@ -4,7 +4,7 @@ pkgver=0.1.0
 pkgrel=1
 pkgdesc="A powerful, feature-rich TUI and CLI for browsing and downloading Suno.ai tracks"
 arch=('x86_64' 'aarch64')
-url="https://github.com/pilldev/suno-tui"
+url="https://github.com/ineedmypills/SunoDownloader"
 license=('MIT')
 depends=('gcc-libs' 'glibc')
 makedepends=('cargo')
@@ -13,7 +13,7 @@ optdepends=(
     'ffmpeg: 320 kbps MP3 conversion and stream transcoding'
 )
 source=("$pkgname-$pkgver.tar.gz::$url/archive/refs/tags/v$pkgver.tar.gz")
-sha256sums=('SKIP')
+sha256sums=('7b7d991f61e211a69127e498fd10e0304a2bf545056c45c4721730672809fef4')
 
 prepare() {
     cd "$pkgname-$pkgver"
